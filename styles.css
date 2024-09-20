@@ -1,0 +1,79 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Courier New', monospace;
+    background-color: #000;
+    color: #0f0;
+    overflow: hidden;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+}
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 1em;
+    text-shadow: 2px 2px #0f0;
+}
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+    margin-bottom: 2em;
+}
+.menu-item {
+    font-size: 1.5em;
+    background: none;
+    border: 2px solid #0f0;
+    color: #0f0;
+    padding: 0.7em 1.5em;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    min-width: 250px;
+}
+.menu-item:hover, .menu-item.selected {
+    background-color: #0f0;
+    color: #000;
+}
+.aliens {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2em;
+}
+.alien {
+    width: 40px;
+    height: 40px;
+    background-color: #0f0;
+    margin: 0 15px;
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
+.copyright {
+    position: absolute;
+    bottom: 1em;
+    font-size: 0.8em;
+}
+.stars {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    background: #0f0;
+}
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2em;
+    }
+    .menu-item {
+        font-size: 1.2em;
+        min-width: 200px;
+    }
+    .alien {
+        width: 30px;
+        height: 30px;
+        margin: 0 10px;
+    }
+}
