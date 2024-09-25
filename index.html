@@ -2,24 +2,56 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Space Invaders</title>
+    <title>Space Inavers</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <h1 id="title">SPACE INVADERS</h1>
+    <div class="container" id="menu-container">
+        <h1 id="title">SPACE INAVERS</h1>
         <div class="aliens">
             <div class="alien"></div>
             <div class="alien"></div>
             <div class="alien"></div>
         </div>
         <nav class="menu">
-            <button class="menu-item" data-option="start">START GAME</button>
-            <button class="menu-item" data-option="scores">HIGH SCORES</button>
+            <button class="menu-item" id="start-button">START GAME</button>
         </nav>
         <p class="copyright">© 2024 yael</p>
     </div>
-    <script src="script.js"></script>
+
+    <div id="canvas-container" class="hidden">
+        <canvas id="canvas" width="960" height="540"></canvas>
+    </div>
+
+    <audio id="boing">
+        <source src="assets/sonidos/boing.mp3">
+        <source src="assets/sonidos/boing.ogg">
+    </audio>
+    <audio id="disparo">
+        <source src="assets/sonidos/disparo.mp3">
+        <source src="assets/sonidos/disparo.ogg">
+    </audio>
+    <audio id="intro">
+        <source src="assets/sonidos/intro.mp3">
+        <source src="assets/sonidos/intro.ogg">
+    </audio>
+    <audio id="fin">
+        <source src="assets/sonidos/gameOver.mp3">
+        <source src="assets/sonidos/gameOver.ogg">
+    </audio>
+    <audio id="victory"></audio>
+        <source src="assets/sonidos/gameOver.mp3">
+        <source src="assets/sonidos/gameOver.ogg">
+    </audio>
+    
+    <script src="js/models/Player.js"></script>
+    <script src="js/models/Enemy.js"></script>
+    <script src="js/models/Bullet.js"></script>
+    <script src="js/models/GameModel.js"></script>
+    <script src="js/views/GameView.js"></script>
+    <script src="js/controllers/GameController.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
